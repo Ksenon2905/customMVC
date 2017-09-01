@@ -1,5 +1,6 @@
 <?php
 
+include_once "../const.php"; 
 class DBC {
     private static $_instance;
 
@@ -11,7 +12,8 @@ class DBC {
     }
 
     private function _connect(){
-        $this->con = new PDO('mysql:host=localhost;dbname=music', 'root', 'dreamteam');
+        $conn ='mysql:host=' . DB_HST . ';dbname=' . DB_NAM;
+        $this->con = new PDO($conn, DB_USR, DB_PWD);
     }
 
     public function get_connection(){
