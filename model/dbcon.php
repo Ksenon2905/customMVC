@@ -1,6 +1,6 @@
 <?php
 
-include_once "../const.php"; 
+include_once "const.php"; 
 class DBC {
     private static $_instance;
 
